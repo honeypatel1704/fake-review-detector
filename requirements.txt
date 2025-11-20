@@ -1,0 +1,9 @@
+flask
+flask-cors
+joblib
+scikit-learn
+pandas
+gunicorn
+pymongo
+dnspython
+werkzeug

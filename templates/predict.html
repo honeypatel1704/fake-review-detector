@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Review Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="auth-body" style="background-color: rgb(205, 247, 247);">
+
+    <div class="auth-container">
+
+        <div class="auth-left">
+            <img src="{{ url_for('static', filename='register_robot.png') }}" class="robot-img">
+        </div>
+
+        <div class="auth-right">
+            <h1>Fake Review Detector</h1>
+            <p class="sub-title">Enter a review to check if it's Real or Fake.</p>
+
+            <textarea id="reviewInput" placeholder="Write your review here..." rows="6"></textarea>
+
+            <button class="auth-btn" onclick="checkReview()">Check Review</button>
+
+            <h2 id="resultText"></h2>
+
+            <img src="{{ url_for('static', filename='login_robot_small.png') }}" class="robot-small">
+        </div>
+
+    </div>
+
+<script>
+function checkReview() {
+    const review = document.getElementById("reviewInput").value;
+
+    fetch("/predict", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ review: review })
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("resultText").innerHTML =
+            data.prediction === "FAKE"
+            ? "🚨 FAKE REVIEW DETECTED!"
+            : "✅ REAL REVIEW";
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Fake Review Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <!-- LEFT ROBOT -->
+    <div class="auth-left">
+        <img src="{{ url_for('static', filename='register_robot.png') }}" class="robot-img">
+    </div>
+
+    <!-- RIGHT FORM (Glass Effect Card) -->
+    <div class="auth-right">
+
+        <h1>Nice to meet you!</h1>
+        <p class="sub-title">Let's Register First!</p>
+
+        <!-- REGISTRATION FORM -->
+        <form method="POST" action="/register">
+
+            <!-- ROW 1: Username + Nickname -->
+            <div class="row">
+                <div class="col">
+                    <label>Username</label>
+                    <input type="text" name="username" placeholder="Enter Username" required>
+                </div>
+
+                <div class="col">
+                    <label>Nick Name</label>
+                    <input type="text" name="nickname" placeholder="Enter Nickname">
+                </div>
+            </div>
+
+            <!-- ROW 2: Phone + Email -->
+            <div class="row">
+                <div class="col">
+                    <label>Phone Number</label>
+                    <input type="text" name="phone" placeholder="Enter Phone Number">
+                </div>
+
+                <div class="col">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Enter Email" required>
+                </div>
+            </div>
+
+            <!-- ROW 3: Password + Confirm -->
+            <div class="row">
+                <div class="col">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+
+                <div class="col">
+                    <label>Confirm Password</label>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+            </div>
+
+            <!-- LOGIN LINK -->
+            <p class="small-text">
+                Already have an account?
+                <a href="{{ url_for('login_page') }}">Login Now</a>
+            </p>
+
+            <!-- BUTTON -->
+            <button class="auth-btn" type="submit">Register</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

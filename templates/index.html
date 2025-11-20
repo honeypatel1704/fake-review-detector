@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Review Detection | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body class="home-body" style="background-color: rgb(205, 247, 247);">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Fake Review Detection</div>
+        <nav>
+            <a href="{{ url_for('home_page') }}">Home</a>
+            <a href="{{ url_for('team_page') }}">Team</a>
+            <a href="{{ url_for('contact_page') }}">Contact</a>
+            <a href="{{ url_for('about_page') }}">About Us</a>
+            <a href="{{ url_for('login_page') }}">Login</a>
+        </nav>
+        <button class="demo-btn" onclick="window.location.href='{{ url_for('predict_page') }}'">
+            BOOK A DEMO →
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Fake Review <br><span>Detection</span></h1>
+
+            <p>
+                Harnessing behavioral patterns and AI, we empower platforms to detect<br>
+                and combat fake reviews and the fake accounts that drive them.
+            </p>
+
+            <button class="demo-btn large" onclick="window.location.href='{{ url_for('predict_page') }}'">
+                BOOK A DEMO →
+            </button>
+        </div>
+
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='123.png') }}" class="home-man">
+        </div>
+    </section>
+
+</body>
+</html>

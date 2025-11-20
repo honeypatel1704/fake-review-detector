@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Fake Review Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- MAIN AUTH CONTAINER -->
+<div class="auth-container">
+
+    <!-- LEFT SIDE: ROBOT IMAGE -->
+    <div class="auth-left">
+        <img src="{{ url_for('static', filename='login_robot.png') }}" class="robot-img">
+    </div>
+
+    <!-- RIGHT SIDE: FORM -->
+    <div class="auth-right">
+        <h1>Hello!<br>Welcome Back!</h1>
+        <p class="sub-title">Let's Login to Your Account</p>
+
+        <!-- LOGIN FORM (POST to /login) -->
+        <form method="POST" action="/login">
+
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter Username" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+
+            <button class="auth-btn" type="submit">Login</button>
+        </form>
+
+        <p class="small-text">
+            Don't have an account?
+            <a href="{{ url_for('register_page') }}">Register Now</a>
+        </p>
+
+        <!-- SMALL ROBOT DECORATION -->
+        <img src="{{ url_for('static', filename='login_robot_small.png') }}" class="robot-small">
+    </div>
+
+</div>
+
+</body>
+</html>
