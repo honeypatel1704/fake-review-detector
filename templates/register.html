@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | Fake Review Detection</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
 </head>
 
-<body>
+<body class="register-body">
 
-<div class="auth-container">
+<div class="register-wrapper">
 
-    <!-- LEFT ROBOT -->
-    <div class="auth-left">
-        <img src="{{ url_for('static', filename='register_robot.png') }}" class="robot-img">
+    <!-- LEFT SIDE ROBOT -->
+    <div class="register-left">
+        <img src="{{ url_for('static', filename='register_robot.png') }}" class="robot-big">
     </div>
 
-    <!-- RIGHT FORM (Glass Effect Card) -->
-    <div class="auth-right">
+    <!-- RIGHT FORM CARD -->
+    <div class="register-card">
 
         <h1>Nice to meet you!</h1>
-        <p class="sub-title">Let's Register First!</p>
+        <p class="subtitle">Let’s Register First!</p>
 
-        <!-- REGISTRATION FORM -->
         <form method="POST" action="/register">
 
-            <!-- ROW 1: Username + Nickname -->
+            <!-- ROW 1 -->
             <div class="row">
                 <div class="col">
-                    <label>Username</label>
-                    <input type="text" name="username" placeholder="Enter Username" required>
+                    <label>UserName</label>
+                    <input type="text" name="username" placeholder="Enter UserNname" required>
                 </div>
 
                 <div class="col">
-                    <label>Nick Name</label>
-                    <input type="text" name="nickname" placeholder="Enter Nickname">
+                    <label>NickName</label>
+                    <input type="text" name="nickname" placeholder="Enter NickName">
                 </div>
             </div>
 
-            <!-- ROW 2: Phone + Email -->
+            <!-- ROW 2 -->
             <div class="row">
                 <div class="col">
                     <label>Phone Number</label>
@@ -51,7 +50,7 @@
                 </div>
             </div>
 
-            <!-- ROW 3: Password + Confirm -->
+            <!-- ROW 3 -->
             <div class="row">
                 <div class="col">
                     <label>Password</label>
@@ -65,13 +64,12 @@
             </div>
 
             <!-- LOGIN LINK -->
-            <p class="small-text">
+            <p class="login-link">
                 Already have an account?
                 <a href="{{ url_for('login_page') }}">Login Now</a>
             </p>
 
-            <!-- BUTTON -->
-            <button class="auth-btn" type="submit">Register</button>
+            <button class="register-btn" type="submit">Register</button>
 
         </form>
 

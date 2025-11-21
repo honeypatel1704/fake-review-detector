@@ -1,6 +1,14 @@
 import sqlite3
+import os
 
-conn = sqlite3.connect("users.db")
+# Get absolute path of database inside this folder
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "users.db")
+
+print("Database path:", DB_PATH)
+
+# Connect to DB
+conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()
 
 cursor.execute("SELECT * FROM users")

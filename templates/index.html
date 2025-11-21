@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 
-<body class="home-body" style="background-color: rgb(205, 247, 247);">
+<body class="home-body" style="background-color: rgb(168, 221, 221);">
 
     <!-- Navbar -->
     <header class="navbar">
@@ -40,9 +40,40 @@
         </div>
 
         <div class="hero-image">
-            <img src="{{ url_for('static', filename='123.png') }}" class="home-man">
+            <img src="{{ url_for('static', filename='homepage.png') }}" class="home-man">
+
         </div>
     </section>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <h2>Fake Review Detection</h2>
+            <p>AI-powered system to identify fraudulent reviews and protect customers.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="{{ url_for('home_page') }}">Home</a>
+            <a href="{{ url_for('about_page') }}">About Us</a>
+            <a href="{{ url_for('team_page') }}">Team</a>
+            <a href="{{ url_for('contact_page') }}">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>Email: fakereviewdetector25@gmail.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Fake Review Detection | All Rights Reserved
+    </div>
+</footer>
+
 
 </body>
 </html>

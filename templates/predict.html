@@ -3,29 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake Review Detector</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Check a Review | Fake Review Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}">
 </head>
 
-<body class="auth-body" style="background-color: rgb(205, 247, 247);">
+<body class="predict-body">
 
-    <div class="auth-container">
+    <div class="predict-container">
 
-        <div class="auth-left">
-            <img src="{{ url_for('static', filename='register_robot.png') }}" class="robot-img">
+        <!-- LEFT SIDE -->
+        <div class="left-box">
+
+            <h1 class="left-title">Check a Review</h1>
+
+            <img src="{{ url_for('static', filename='register_robot.png') }}" class="predict-robot">
+
+            <ul class="info-points">
+                <li>Find out how to identify the scale and types of risks your platform is facing</li>
+                <li>Understand the benefits of our continual threat intelligence</li>
+                <li>Learn how we use cluster analysis to connect bad actors and identify biggest threats</li>
+            </ul>
+
         </div>
 
-        <div class="auth-right">
-            <h1>Fake Review Detector</h1>
-            <p class="sub-title">Enter a review to check if it's Real or Fake.</p>
+        <!-- RIGHT SIDE -->
+        <div class="right-box">
 
-            <textarea id="reviewInput" placeholder="Write your review here..." rows="6"></textarea>
+            <h1 class="right-title">Fake Review Detection</h1>
 
-            <button class="auth-btn" onclick="checkReview()">Check Review</button>
+            <label class="label">Company name</label>
+            <input type="text" id="company" class="text-input" placeholder="Enter company name">
 
-            <h2 id="resultText"></h2>
+            <label class="label">Review</label>
+            <textarea id="reviewInput" class="review-box" placeholder="Write your review here..."></textarea>
 
-            <img src="{{ url_for('static', filename='login_robot_small.png') }}" class="robot-small">
+            <button class="check-btn" onclick="checkReview()">CHECK REVIEW →</button>
+
+            <div class="result" id="resultText"></div>
+
+            <!-- Bottom small robot -->
+            <img src="{{ url_for('static', filename='login_robot_small.png') }}" class="tiny-robot">
+
         </div>
 
     </div>
@@ -41,10 +59,18 @@ function checkReview() {
     })
     .then(res => res.json())
     .then(data => {
+
+        // Show result
         document.getElementById("resultText").innerHTML =
             data.prediction === "FAKE"
             ? "🚨 FAKE REVIEW DETECTED!"
             : "✅ REAL REVIEW";
+
+        // ⭐ Auto-clear the textarea + result after 2 seconds
+        setTimeout(() => {
+            document.getElementById("reviewInput").value = "";
+            document.getElementById("resultText").innerHTML = "";
+        }, 2000);
     });
 }
 </script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Fake Review Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='team.css') }}">
+</head>
+
+<body class="team-body">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Fake Review Detection</div>
+        <nav>
+            <a href="{{ url_for('home_page') }}">Home</a>
+            <a href="{{ url_for('team_page') }}">Team</a>
+            <a href="{{ url_for('contact_page') }}">Contact</a>
+            <a href="{{ url_for('about_page') }}">About Us</a>
+            <a href="{{ url_for('login_page') }}">Login</a>
+        </nav>
+
+        <button class="demo-btn" onclick="window.location.href='{{ url_for('predict_page') }}'">
+            BOOK A DEMO →
+        </button>
+    </header>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <h1 class="team-title">Team</h1>
+
+        <div class="team-container">
+
+            <!-- Member 1 -->
+            <div class="team-card">
+                <img src="{{ url_for('static', filename='robot.png') }}" class="team-robot">
+                <h2>HONEY PATEL</h2>
+                <p>Backend Developer</p>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="team-card">
+                <img src="{{ url_for('static', filename='robot.png') }}" class="team-robot">
+                <h2>YASH PATEL</h2>
+                <p>Frontend Developer / UIUX</p>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="team-card">
+                <img src="{{ url_for('static', filename='robot.png') }}" class="team-robot">
+                <h2>PREYA PATEL</h2>
+                <p>Backend Developer</p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

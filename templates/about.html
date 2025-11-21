@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Fake Review Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+
+<body class="about-body">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Fake Review Detection</div>
+        <nav>
+            <a href="{{ url_for('home_page') }}">Home</a>
+            <a href="{{ url_for('team_page') }}">Team</a>
+            <a href="{{ url_for('contact_page') }}">Contact</a>
+            <a href="{{ url_for('about_page') }}">About Us</a>
+            <a href="{{ url_for('login_page') }}">Login</a>
+        </nav>
+
+        <button class="demo-btn" onclick="window.location.href='{{ url_for('predict_page') }}'">
+            BOOK A DEMO →
+        </button>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-container">
+
+        <div class="about-text">
+            <h1>About Us</h1>
+
+            <p>
+                We detect fake reviews and the accounts behind them by combining behavioral
+                analysis, linguistic signals, and modern AI — so businesses and users can trust
+                online feedback again.
+            </p>
+
+            <h2>• Mission, Vision & Values.</h2>
+
+            <div class="list-section">
+                <p><strong><b>• Our Mission</b></strong><br>
+                    To eliminate fake reviews and ensure trustworthy online experiences for everyone.
+                </p>
+
+                <p><strong><b>•Our Vision</b> </strong><br>
+                    A digital world where people can rely on every rating and review with confidence.
+                </p>
+
+                <p><strong><b>• Our Values</b></strong><br>
+                    Transparency • Innovation • Accuracy • User Trust
+                </p>
+            </div>
+        </div>
+
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='aboutus.png') }}" class="contact-robot">
+        </div>
+
+    </section>
+
+</body>
+
+</html>

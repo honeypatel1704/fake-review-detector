@@ -1,0 +1,112 @@
+/* PAGE BACKGROUND */
+.predict-body {
+    background: linear-gradient(135deg, #9ae2e7, #d4e2f8, #e8d4f4);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* MAIN LAYOUT */
+.predict-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+
+/* LEFT SIDE */
+.left-box {
+    width: 45%;
+}
+
+.left-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0a1a3b;
+    margin-bottom: 25px;
+}
+
+.predict-robot {
+    width: 260px;
+    margin: 20px 0;
+}
+
+.info-points {
+    margin-top: 30px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.info-points li {
+    margin-bottom: 12px;
+}
+
+/* RIGHT SIDE */
+.right-box {
+    width: 45%;
+    padding: 20px;
+}
+
+.right-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1c2b6a;
+    margin-bottom: 25px;
+}
+
+.label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: block;
+    color: #1c2b6a;
+}
+
+.text-input {
+    width: 90%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #4060d6;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.review-box {
+    width: 90%;
+    height: 150px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #4060d6;
+    font-size: 15px;
+    resize: none;
+}
+
+/* BUTTON */
+.check-btn {
+    margin-top: 20px;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 30px;
+    background: #223dde;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.check-btn:hover {
+    background: #162bb5;
+    transform: scale(1.05);
+}
+
+/* RESULT TEXT */
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* SMALL ROBOT IMAGE */
+.tiny-robot {
+    width: 80px;
+    position: relative;
+    margin-top: 25px;
+}

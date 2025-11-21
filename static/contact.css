@@ -1,0 +1,100 @@
+/* Background */
+.contact-body {
+    background: linear-gradient(120deg, #b3ecf4, #a7d9ef, #9cc7e6);
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 40px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px;
+}
+
+.navbar nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar nav a:hover {
+    color: #0b5ecf;
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+.demo-btn {
+    background: #fff;
+    padding: 12px 28px;
+    border-radius: 40px;
+    border: 2px solid #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.demo-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Contact Layout */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 120px;
+}
+
+/* Left Image Section */
+.contact-left {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-robot {
+    width: 290px;            /* PERFECT dimension like reference */
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Right Text Section */
+.contact-right {
+    width: 50%;
+}
+
+.contact-right h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.contact-box {
+    margin-bottom: 35px;
+}
+
+.contact-box h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    font-size: 16px;
+    line-height: 1.6;
+}

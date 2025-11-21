@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Fake Review Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+</head>
+
+<body class="contact-body">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Fake Review Detection</div>
+        <nav>
+            <a href="{{ url_for('home_page') }}">Home</a>
+            <a href="{{ url_for('team_page') }}">Team</a>
+            <a href="{{ url_for('contact_page') }}">Contact</a>
+            <a href="{{ url_for('about_page') }}">About Us</a>
+            <a href="{{ url_for('login_page') }}">Login</a>
+        </nav>
+
+        <button class="demo-btn" onclick="window.location.href='{{ url_for('predict_page') }}'">
+            BOOK A DEMO →
+        </button>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+
+        <!-- Robot Image (left) -->
+        <div class="contact-left">
+            <img src="{{ url_for('static', filename='contact.png') }}" class="contact-robot">
+
+        </div>
+
+        <!-- Contact Details (right) -->
+        <div class="contact-right">
+
+            <h1>Contact</h1>
+
+            <!-- Customer Support -->
+            <div class="contact-box">
+                <h3>CUSTOMER SUPPORT</h3>
+                <p>
+                    Helpdesk & Technical Team<br>
+                    support@fakereviewdetector.com<br>
+                    (123) 456-7890
+                </p>
+            </div>
+
+            <!-- Email Support -->
+            <div class="contact-box">
+                <h3>EMAIL SUPPORT</h3>
+                <p>
+                    <strong>fakereviewdetector25@gmail.com</strong><br>
+                    Available 24/7 — we typically reply within 24 hours.
+                    Chatbot coming soon... for your instant help.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

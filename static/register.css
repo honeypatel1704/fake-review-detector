@@ -1,0 +1,147 @@
+
+/* -----------------------------
+   GLOBAL SETTINGS
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.register-body {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #b6eef2, #d9ecfa, #f3dffc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* -----------------------------
+   MAIN WRAPPER
+------------------------------ */
+.register-wrapper {
+    display: flex;
+    width: 90%;
+    max-width: 1400px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+/* -----------------------------
+   LEFT SIDE ROBOT
+------------------------------ */
+.register-left {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.robot-big {
+    width: 350px;
+    animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* -----------------------------
+   GLASS CARD (RIGHT SIDE)
+------------------------------ */
+.register-card {
+    width: 55%;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 45px 50px;
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.register-card h1 {
+    font-size: 38px;
+    color: #1c2b57;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #445d8b;
+    margin-bottom: 25px;
+}
+
+/* -----------------------------
+   FORM ROWS
+------------------------------ */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.col {
+    width: 48%;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c2b57;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 2px solid #3453a8;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Highlight input on focus */
+input:focus {
+    border-color: #1d3d9f;
+    box-shadow: 0 0 6px rgba(29, 61, 159, 0.4);
+}
+
+/* -----------------------------
+   LOGIN LINK
+------------------------------ */
+.login-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #2e3a4f;
+}
+
+.login-link a {
+    color: #1d3d9f;
+    font-weight: 600;
+}
+
+/* -----------------------------
+   REGISTER BUTTON
+------------------------------ */
+.register-btn {
+    width: 150px;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    background: #3453a8;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: #233a85;
+}
