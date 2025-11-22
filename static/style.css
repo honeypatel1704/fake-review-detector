@@ -1,6 +1,6 @@
-/* /* ------------------------------------
+/* ============================================================
    GLOBAL STYLE
------------------------------------- */
+============================================================ */
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +15,9 @@ body.home-body {
   overflow-x: hidden;
 }
 
-/* ------------------------------------
+/* ============================================================
    NAVBAR
------------------------------------- */
+============================================================ */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,6 @@ body.home-body {
   color: #000;
 }
 
-/* Navbar Link Hover Animation */
 .navbar nav a {
   text-decoration: none;
   color: #000;
@@ -58,9 +57,6 @@ body.home-body {
   width: 100%;
 }
 
-/* ------------------------------------
-   BUTTONS
------------------------------------- */
 .demo-btn {
   padding: 12px 28px;
   border-radius: 40px;
@@ -75,139 +71,134 @@ body.home-body {
   background: #000;
   color: #fff;
 }
-/* ------------------------------------
-   LOGIN PAGE
------------------------------------- */
 
+/* ============================================================
+   LOGIN PAGE
+============================================================ */
 .login-body {
-    background: linear-gradient(120deg, #b3f0ff, #d7e6ff, #ffe8f2);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: linear-gradient(120deg, #b3f0ff, #d7e6ff, #ffe8f2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-container {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .login-left {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login-card {
-    width: 430px;
-    height: 430px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    border-radius: 30px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 430px;
+  height: 430px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-main-robot {
-    width: 300px;
-    animation: float 4s ease-in-out infinite;
+  width: 300px;
+  animation: float 4s ease-in-out infinite;
 }
 
 .login-footer {
-    margin-top: 20px;
-    font-size: 14px;
-    opacity: 0.6;
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.6;
 }
 
 .login-right {
-    width: 45%;
-    padding-right: 50px;
+  width: 45%;
+  padding-right: 50px;
 }
 
 .login-right h1 {
-    font-size: 42px;
-    color: #1a2b5f;
-    font-weight: 800;
+  font-size: 42px;
+  color: #1a2b5f;
+  font-weight: 800;
 }
 
 .subtitle {
-    margin-top: 10px;
-    color: #445;
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-
-.login-form {
-    width: 100%;
+  margin-top: 10px;
+  color: #445;
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 
 .login-form label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
 }
 
 .login-form input {
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    margin: 10px 0 25px;
-    font-size: 16px;
-    outline: none;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  margin: 10px 0 25px;
+  font-size: 16px;
+  outline: none;
 }
 
 .login-form input:focus {
-    border-color: #4467ff;
+  border-color: #4467ff;
 }
 
 .login-btn {
-    width: 170px;
-    padding: 12px;
-    background: #324bff;
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 10px;
-    border: none;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: 0.2s;
+  width: 170px;
+  padding: 12px;
+  background: #324bff;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .login-btn:hover {
-    background: #1a30cc;
+  background: #1a30cc;
 }
 
 .small-text {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #444;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
 }
 
 .small-text a {
-    color: #324bff;
-    font-weight: 600;
+  color: #324bff;
+  font-weight: 600;
 }
 
 .login-small-robot {
-    width: 120px;
-    margin-top: 20px;
-    animation: float 4s ease-in-out infinite;
+  width: 120px;
+  margin-top: 20px;
+  animation: float 4s ease-in-out infinite;
 }
 
-
-/* ------------------------------------
+/* ============================================================
    HERO SECTION
------------------------------------- */
+============================================================ */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -216,7 +207,6 @@ body.home-body {
   height: 85vh;
 }
 
-/* Hero Text Fade-in Animation */
 .hero-text h1,
 .hero-text p,
 .hero-text .large {
@@ -250,7 +240,6 @@ body.home-body {
   animation-delay: 0.3s;
 }
 
-/* Big Button - Gradient + Hover Zoom */
 .hero-text .large {
   background: linear-gradient(135deg, #3a8dff, #6ad0ff);
   color: white;
@@ -271,9 +260,6 @@ body.home-body {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* ------------------------------------
-   HERO IMAGE + ANIMATIONS
------------------------------------- */
 .hero-image {
   position: relative;
   width: 45%;
@@ -281,7 +267,6 @@ body.home-body {
   justify-content: center;
 }
 
-/* Floating Animation for the Person Image */
 .home-man {
   width: 360px;
   z-index: 10;
@@ -289,18 +274,11 @@ body.home-body {
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
 }
 
-/* Background Hexagon Shape */
 .hero-image::before {
   content: "";
   position: absolute;
@@ -315,7 +293,6 @@ body.home-body {
   animation: slowfloat 6s ease-in-out infinite;
 }
 
-/* Blue Abstract Curves */
 .hero-image::after {
   content: "";
   position: absolute;
@@ -331,16 +308,67 @@ body.home-body {
   animation: slowfloat 7s ease-in-out infinite;
 }
 
-/* Slow Floating Animation for Shapes */
 @keyframes slowfloat {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(10px) rotate(1deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
 }
+
+/* ============================================================
+   FOOTER (NEW)
+============================================================ */
+/* ------------------------------------
+   FOOTER (Horizontal Layout)
+------------------------------------ */
+.footer {
+  width: 100%;
+  background: #2c2f38;
+  color: #fff;
+  padding: 60px 80px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #d3d3d3;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #6ad0ff;
+}
+
+/* Footer bottom text */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
 
